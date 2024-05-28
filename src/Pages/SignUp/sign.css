@@ -1,0 +1,21 @@
+/* Keyframes for shaking animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+
+/* Initial state of the image */
+.image {
+    position: relative;
+    right: -100px; /* Start off-screen */
+    opacity: 0; /* Start transparent */
+    transition: all 0.5s ease-in-out;
+}
+
+/* State when the image is in view */
+.image.in-view {
+    right: 0; /* Move to original position */
+    opacity: 1; /* Fully visible */
+    animation: shake 0.5s; /* Apply shaking animation */
+}
