@@ -33,12 +33,12 @@ const PostDetails = () => {
                 <meta property="description" content="Description of your home page for SEO purposes" />
             </Helmet>
             <div className="flex flex-col lg:flex-row w-full gap-10 justify-between px-4">
-                <div className="max-h-min bg-blue-400">
+                <div className="max-h-min bg-blue-400 w-64">
                     <p className="text-2xl font-semibold text-center">All Posts</p> <br />
                     <ul>
-                        {posts.map((post) => (
-                            <li key={post._id} className="cursor-pointer text-blue-500" onClick={() => handlePostClick(post)}>
-                                {post.title}
+                        {posts.map((post,index) => (
+                            <li key={post._id} className="cursor-pointer text-black " onClick={() => handlePostClick(post)}>
+                               {index+1}. {post.title}
                             </li>
                         ))}
                     </ul>

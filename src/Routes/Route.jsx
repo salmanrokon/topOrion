@@ -11,6 +11,7 @@ import Posts from "../Pages/Dashboard/Posts/Posts";
 import Dashboard from "../LayOut/Main/Dashboard";
 import PostList from "../Pages/Dashboard/PostList/PostList";
 import PostDetails from "../Pages/Posts/PostDetails";
+import Users from "../Pages/Dashboard/Users/Users";
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,8 @@ const router = createBrowserRouter([
         },
         {
           path:"/postDetails/:id",
-          element:<PostDetails></PostDetails>
+          element:<PostDetails></PostDetails>,
+          
         }
         
       ]
@@ -60,6 +62,11 @@ const router = createBrowserRouter([
         {
           path:"post",
           element:<Posts></Posts>
+        },
+        {
+          path:"users",
+          element:<Users></Users>,
+          // loader:({params})=>fetch(`http://localhost:5000/users${params.id}`)
         }
       ]
     },

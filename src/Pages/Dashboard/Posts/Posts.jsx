@@ -73,7 +73,7 @@ const Posts = () => {
                                 <input
                                     {...register("descriptions", { required: true })}
                                     type="text"
-                                    placeholder="Descriptions"
+                                    placeholder="Meta Descriptions"
                                     className="input input-bordered w-full rounded-none mt-4"
                                 />
                                 {errors.descriptions && <span className="text-red-500">This field is required</span>}
