@@ -57,7 +57,7 @@ const Users = () => {
                     {/* head */}
                     <thead>
                         <tr className="text-lg">
-                            <th>Serial</th>
+                            <th>Serial.</th>
                             <th>Name</th>
                             <th>Job</th>
                             <th>Role</th>
